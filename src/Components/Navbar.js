@@ -20,7 +20,7 @@ export default function Navbar(props) {
     setRotation(prevRotation => prevRotation + 360);
       setTimeout(() => {
         props.setProg(100);
-        navigate('/')
+        navigate('/react-proj1/')
       }, 500);
   };
   const handleMenuClick = () => {
@@ -46,7 +46,7 @@ export default function Navbar(props) {
       <div className="navigation" id="nav-bar" ref={navigationRef}>
         <ul>
           <li>
-            <Link to="/" onClick={handleClick}>
+            <Link to="/react-proj1/" onClick={handleClick}>
               Home
             </Link>
           </li>
