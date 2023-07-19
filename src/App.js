@@ -22,7 +22,7 @@ export default function App() {
         <div id="main-body">
           <Routes>
             <Route path="/Password-Generator" element={<Home setProg={setProgress} />} />
-            <Route exact path="/" element={<Home setProg={setProgress} />} />
+            <Route exact path="react-proj1/" element={<Home setProg={setProgress} />} />
             <Route exact path="/password" element={<Password/>} />
             <Route exact path="/about" element={<About />} />
             <Route exact path="/services" element={<Services />} />
