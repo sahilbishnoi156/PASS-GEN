@@ -17,7 +17,7 @@ export default function PageContent(props) {
     arrowRef.current.style.transform = " scale(1.8) translateX(100px)";
     setTimeout(() => {
       props.setProg(100);
-      navigate(`/password`);
+      navigate(`/generatepassword`);
     }, 400);
   }
   useEffect(() => {

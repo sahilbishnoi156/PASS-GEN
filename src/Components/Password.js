@@ -2,9 +2,11 @@ import React, { useState, useRef, useEffect } from "react";
 import luffBac from "../luffy-background.png";
 import "../Components/css/Password.css";
 import gsap from "gsap";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 // import { useNavigate } from "react-router-dom";
 
-export default function Password() {
+export default function Password(props) {
   // const navigate = useNavigate();
   const passInputRef = useRef(null);
   const luffRef = useRef(null);
@@ -17,6 +19,17 @@ export default function Password() {
   const clipboard = navigator.clipboard;
 
   const generatePassword = (length = 8) => {
+    toast.success('Password Generated !', {
+      position: "bottom-left",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      });
+    props.setProg(0);
     const characters =
       "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+";
     let password = "";
@@ -25,7 +38,10 @@ export default function Password() {
         Math.floor(Math.random() * characters.length)
       );
     }
-    setGeneratedPassword(password);
+    setTimeout(() => {
+      props.setProg(100);
+      setGeneratedPassword(password);
+    }, 400);
   };
   const handleCopy = () => {
     togglePop.current.style.opacity = 1;
@@ -72,12 +88,12 @@ export default function Password() {
     gsap.fromTo(
       btnRef.current,
       {
-        opacity:0,
-        width:0
+        opacity: 0,
+        width: 0,
       },
       {
-        opacity:1,
-        width:1
+        opacity: 1,
+        width: 1,
       }
     );
     gsap.fromTo(
@@ -94,54 +110,71 @@ export default function Password() {
   }, []);
   return (
     <div id="password-div-outer">
-        <div id="password-div-heading">
-          <div ref={headingRef} id="top-heading">Generate A Strong Password Now :</div>
-          <div id="top-heading-content">
-            <p id="top-heading-content-inner">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum ut qui et molestias. Tempore, quas ullam sit modi
-              aperiam dolore beatae molestiae.
-            </p>
+      <div id="password-div-heading">
+        <div ref={headingRef} id="top-heading">
+          Generate A Strong Password Now :
+        </div>
+        <div id="top-heading-content">
+          <p id="top-heading-content-inner">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+            ut qui et molestias. Tempore, quas ullam sit modi aperiam dolore
+            beatae molestiae.
+          </p>
+        </div>
+      </div>
+      <div id="password-container">
+        <form id="password-form" ref={divRef}>
+          <label htmlFor="password-div-input">
+            Password:
+            <input
+              type="password"
+              value={generatedPassword}
+              disabled
+              ref={passInputRef}
+              id="password-div-input"
+            />
+          </label>
+
+          <div id="icons-div">
+            <span
+              className="material-symbols-outlined"
+              onClick={handleVisibility}
+            >
+              {visibilityIcon}
+            </span>
+            <div id="toggle-pop" ref={togglePop}>
+              Copied to clipboard
+            </div>
+            <span className="material-symbols-outlined" onClick={handleCopy}>
+              content_copy
+            </span>
+          </div>
+        </form>
+
+        <div id="password-div-btns">
+          <div
+            id="generate-btn"
+            className="password-div-btn"
+            onClick={generatePassword}
+          >
+            <span>Generate</span>
           </div>
         </div>
-        <div id="password-container" >
-              <form id="password-form" ref={divRef}>
-                <label htmlFor="password-div-input" >Password:
-                    <input
-                      type="password"
-                      value={generatedPassword}
-                      disabled
-                      ref={passInputRef}
-                      id="password-div-input"
-                    /></label>
-              
-              <div id="icons-div">
-                <span
-                  className="material-symbols-outlined"
-                  onClick={handleVisibility}
-                >
-                  {visibilityIcon}
-                </span>
-                <div id="toggle-pop" ref={togglePop}>
-                  Copied to clipboard
-                </div>
-                <span
-                  className="material-symbols-outlined"
-                  onClick={handleCopy}
-                >
-                  content_copy
-                </span>
-              </div>
-              </form>
-          
-          <div id="password-div-btns">
-            <div id="generate-btn" className="password-div-btn" onClick={generatePassword}>
-            <span>Generate</span>
-            </div>
-          </div>
-          </div>
-        
-      <img src={luffBac} alt="not found" ref={luffRef} id="luffy-image"/>
+      </div>
+
+      <img src={luffBac} alt="not found" ref={luffRef} id="luffy-image" />
+      <ToastContainer
+        position="bottom-left"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </div>
   );
 }

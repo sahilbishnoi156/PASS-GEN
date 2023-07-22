@@ -1,7 +1,67 @@
 #service-div{
-    /* background-color: #FADE26; */
-    height: 200vh;
-    margin-bottom: 50px;
-    font-size: 5rem;
-    color: #FADE26;
+    width: 100%;
+    padding: 2rem 4rem;
+    box-sizing: border-box;
+}
+#service-div-inner{
+    width: 100%;
+    padding: 1rem 1rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.services{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+#service-div-inner h1{
+    font-size: 4rem;
+    font-weight: 900;
+    color: #000;
+    text-shadow: 0px 1px 4px white;
+    font-family: "Vujahday Script", cursive;
+}
+
+#service-div-inner p{
+    font-size: 1rem;
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.676);
+    color: #000;
+    font-family: "Poppins", cursive;
+}
+#explore-outer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+#explore{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .3rem;
+    font-size: 2rem;
+    padding: .6rem 1.5rem;
+    background-color: rgba(188, 8, 8, 0.616);
+    border-radius: 30px;
+    width: 15%;
+    color: white;
+    transition: all .2s;
+    box-shadow: 1px 1px 8px rgba(255, 255, 255, 0.356);
+}
+#explore span{
+    font-size: 2rem;
+    color: white;
+}
+#explore:hover{
+    box-shadow: 2px 2px 10px 2px white;
+    background-color: rgba(188, 8, 8, 0.87);
+    transform: translateY(-5px);
+    cursor: pointer;
 }

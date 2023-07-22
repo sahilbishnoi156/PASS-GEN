@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import logoImage from '../logo-img.jpg';
+import logoImage from '../logo-img.png';
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function Navbar(props) {
@@ -20,7 +20,7 @@ export default function Navbar(props) {
     setRotation(prevRotation => prevRotation + 360);
       setTimeout(() => {
         props.setProg(100);
-        navigate('/react-proj1/')
+        navigate('/PASS-GEN/')
       }, 500);
   };
   const handleMenuClick = () => {
@@ -46,7 +46,7 @@ export default function Navbar(props) {
       <div className="navigation" id="nav-bar" ref={navigationRef}>
         <ul>
           <li>
-            <Link to="/react-proj1/" onClick={handleClick}>
+            <Link to="/PASS-GEN/" onClick={handleClick}>
               Home
             </Link>
           </li>

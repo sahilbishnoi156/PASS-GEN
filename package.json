@@ -1,5 +1,5 @@
 {
-  "homepage": "https://sahilbishnoi156.github.io/react-proj1/",
+  "homepage": "https://sahilbishnoi156.github.io/PASS-GEN/",
   "name": "passwordgen",
   "version": "0.1.0",
   "private": true,
@@ -11,15 +11,17 @@
     "gsap": "^3.12.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
     "react-infinite-scroll-component": "^6.1.0",
     "react-router-dom": "^6.14.1",
     "react-scripts": "5.0.1",
+    "react-toastify": "^9.1.3",
     "react-top-loading-bar": "^2.3.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",

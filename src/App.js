@@ -21,18 +21,15 @@ export default function App() {
         </div>
         <div id="main-body">
           <Routes>
-            <Route path="/react-proj1/" element={<Home setProg={setProgress} />} />
+            <Route path="/PASS-GEN/" element={<Home setProg={setProgress} />} />
             <Route exact path="/" element={<Home setProg={setProgress} />} />
-            <Route exact path="/password" element={<Password/>} />
-            <Route exact path="/about" element={<About />} />
-            <Route exact path="/services" element={<Services />} />
-            <Route exact path="/crew" element={<Crew />} />
+            <Route exact path="/generatepassword" element={<Password setProg={setProgress}/>} />
+            <Route exact path="/about" element={<About setProg={setProgress}/>} />
+            <Route exact path="/services" element={<Services setProg={setProgress}/>} />
+            <Route exact path="/crew" element={<Crew setProg={setProgress} />} />
           </Routes>
           </div>
       </div>
     </Router>
   );
 }
-// gsap.from('#pass-heading',{
-
-// })
