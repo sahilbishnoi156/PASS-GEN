@@ -18,7 +18,7 @@ export default function Navbar(props) {
     }, 100);
     setRotation(prevRotation => prevRotation + 360);
     // Check if the screen width is less than 450
-    if (windowWidth < 450) {
+    if (windowWidth < 800) {
       if (!nav) {
         navigationRef.current.style.transform = "translateX(0)";
         setNav(true);

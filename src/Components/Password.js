@@ -174,7 +174,7 @@ export default function Password(props) {
         draggable
         pauseOnHover
         theme="colored"
-        style={{width:"70vw"}}
+        style={{width: window.innerWidth <450 ? "70vw" : "20vw"}}
       />
     </div>
   );

@@ -18,10 +18,10 @@
 }
 
 /*~ background image */
-#background-img{
-    position: absolute;
-    bottom: 30%;
-    z-index: -1;
+#background-img {
+  position: absolute;
+  bottom: 30%;
+  z-index: -1;
 }
 
 /*~ selecting child items of heading */
@@ -118,11 +118,11 @@
 }
 
 #started-div-btn span {
-    font-size: 2rem;
-    transition: 0.2s;
+  font-size: 2rem;
+  transition: 0.2s;
 }
 #started-div-btn:hover span {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 /*~ keyframes */
@@ -181,20 +181,26 @@
     font-weight: 900;
     bottom: 3rem;
   }
-  #home-heading span:is(:nth-child(1),:nth-child(3),:nth-child(4)):before {
+  #home-heading span:is(:nth-child(1), :nth-child(3), :nth-child(4)):before {
     display: none;
     animation: none !important;
-    
   }
   #home-div-outer {
     justify-content: flex-start;
     gap: 2rem;
   }
-  #background-img{
+  #background-img {
     position: absolute;
     bottom: 18%;
     z-index: -1;
-}
+  }
+  #started-div-btn {
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
 }
 @media only screen and (max-width: 450px) {
   #home-heading span:is(:nth-child(1), :nth-child(3)) {
@@ -204,28 +210,38 @@
     font-size: 1rem;
     text-shadow: 2px 2px 20px white;
   }
-  #background-img{
+  #background-img {
     bottom: 30%;
-}
+  }
+  #started-div-btn {
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 }
 @media only screen and (max-width: 340px) {
   #home-heading span:is(:nth-child(1), :nth-child(3)) {
     font-size: 5rem;
   }
-  #home-div-outer{
+  #home-div-outer {
     gap: 0;
   }
   #home-heading p {
-    font-size: .7rem;
+    font-size: 0.7rem;
     text-shadow: 2px 2px 20px white;
     color: #968307;
   }
-  #started-div-btn{
-      width: 80%;
-      font-size: 1.4rem !important;
-      gap: 0;
+  #started-div-btn {
+    width: 80%;
+    font-size: 1.4rem !important;
+    gap: 0;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
   }
-  #background-img{
+  #background-img {
     bottom: 10%;
-}
+  }
 }
