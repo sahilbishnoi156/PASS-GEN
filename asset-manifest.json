@@ -1,20 +1,19 @@
 {
   "files": {
-    "main.css": "/PASS-GEN/static/css/main.367954a9.css",
-    "main.js": "/PASS-GEN/static/js/main.712bbc79.js",
-    "static/js/787.88bfb74c.chunk.js": "/PASS-GEN/static/js/787.88bfb74c.chunk.js",
+    "main.css": "/PASS-GEN/static/css/main.eff63fbe.css",
+    "main.js": "/PASS-GEN/static/js/main.b1312ab7.js",
     "static/media/page1-background.jpg": "/PASS-GEN/static/media/page1-background.e443f78cb6ed44dfb1da.jpg",
     "static/media/getting-started-image.png": "/PASS-GEN/static/media/getting-started-image.e6b9998d7184671ce997.png",
     "static/media/luffy-background.png": "/PASS-GEN/static/media/luffy-background.792f057edf508530f027.png",
     "static/media/naruto-background.png": "/PASS-GEN/static/media/naruto-background.dc647b0aca8085b8a365.png",
     "static/media/logo-img.png": "/PASS-GEN/static/media/logo-img.9a608b5d95b7f824c61c.png",
+    "static/media/profile.jpg": "/PASS-GEN/static/media/profile.ded3a6fb04228c214e53.jpg",
     "index.html": "/PASS-GEN/index.html",
-    "main.367954a9.css.map": "/PASS-GEN/static/css/main.367954a9.css.map",
-    "main.712bbc79.js.map": "/PASS-GEN/static/js/main.712bbc79.js.map",
-    "787.88bfb74c.chunk.js.map": "/PASS-GEN/static/js/787.88bfb74c.chunk.js.map"
+    "main.eff63fbe.css.map": "/PASS-GEN/static/css/main.eff63fbe.css.map",
+    "main.b1312ab7.js.map": "/PASS-GEN/static/js/main.b1312ab7.js.map"
   },
   "entrypoints": [
-    "static/css/main.367954a9.css",
-    "static/js/main.712bbc79.js"
+    "static/css/main.eff63fbe.css",
+    "static/js/main.b1312ab7.js"
   ]
 }
