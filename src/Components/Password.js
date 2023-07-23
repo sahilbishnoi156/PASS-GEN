@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import luffBac from "../luffy-background.png";
+import luffBac from "./assets/luffy-background.png";
 import "../Components/css/Password.css";
 import gsap from "gsap";
 import { ToastContainer, toast } from "react-toastify";
@@ -165,7 +165,7 @@ export default function Password(props) {
       <img src={luffBac} alt="not found" ref={luffRef} id="luffy-image" />
       <ToastContainer
         position="bottom-left"
-        autoClose={5000}
+        autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
@@ -174,6 +174,7 @@ export default function Password(props) {
         draggable
         pauseOnHover
         theme="colored"
+        style={{width:"70vw"}}
       />
     </div>
   );

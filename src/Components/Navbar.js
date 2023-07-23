@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import logoImage from '../logo-img.png';
+import logoImage from './assets/logo-img.png';
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function Navbar(props) {
@@ -8,12 +8,25 @@ export default function Navbar(props) {
   const navigationRef = useRef(null);
   const navigate = useNavigate();
 
+  
   const handleClick = () => {
+    // Get the current window width
+    const windowWidth = window.innerWidth;
     props.setProg(0);
     setTimeout(() => {
       props.setProg(100);
     }, 100);
     setRotation(prevRotation => prevRotation + 360);
+    // Check if the screen width is less than 450
+    if (windowWidth < 450) {
+      if (!nav) {
+        navigationRef.current.style.transform = "translateX(0)";
+        setNav(true);
+      } else {
+        navigationRef.current.style.transform = "translateX(-100%)";
+        setNav(false);
+      }
+    }
   };
   const handleLogoClick = () => {
     props.setProg(0);
@@ -23,6 +36,23 @@ export default function Navbar(props) {
         navigate('/PASS-GEN/')
       }, 500);
   };
+  const handlesLogoClick = () => {
+    props.setProg(0);
+    setRotation(prevRotation => prevRotation + 360);
+      setTimeout(() => {
+        props.setProg(100);
+        navigate('/PASS-GEN/')
+      }, 500);
+    if (!nav) {
+      navigationRef.current.style.transform = "translateX(0)";
+      setNav(true);
+    }
+    else {
+      navigationRef.current.style.transform = "translateX(-100%)";
+      setNav(false);
+    }
+  };
+  
   const handleMenuClick = () => {
     if (!nav) {
       navigationRef.current.style.transform = "translateX(0)";
@@ -45,24 +75,32 @@ export default function Navbar(props) {
       </div>
       <div className="navigation" id="nav-bar" ref={navigationRef}>
         <ul>
+          <li id="special-li">
+          <img
+          src={logoImage}
+          alt="Logo"
+          style={{ transform: `rotate(${rotation}deg)` }}
+          onClick={handlesLogoClick}
+        />
+          </li>
           <li>
             <Link to="/PASS-GEN/" onClick={handleClick}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/about" onClick={handleClick}>
+            <Link to="/PASS-GEN/about" onClick={handleClick}>
               About
             </Link>
           </li>
           <li>
-            <Link to="/services" onClick={handleClick}>
+            <Link to="/PASS-GEN/services" onClick={handleClick}>
               Services
             </Link>
           </li>
           <li>
-            <Link to="/crew" onClick={handleClick}>
-              Crew
+            <Link to="/PASS-GEN/projects" onClick={handleClick}>
+              Projects
             </Link>
           </li>
         </ul>

@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import gsap from 'gsap';
-import backgroundImg from '../naruto-background.png';
+import backgroundImg from './assets/naruto-background.png';
 import { useNavigate } from "react-router-dom";
-import "../getting-started-image.png";
+import "./assets/getting-started-image.png";
 import '../Components/css/Home.css'
 
 export default function PageContent(props) {
@@ -17,7 +17,7 @@ export default function PageContent(props) {
     arrowRef.current.style.transform = " scale(1.8) translateX(100px)";
     setTimeout(() => {
       props.setProg(100);
-      navigate(`/generatepassword`);
+      navigate(`/PASS-GEN/generatepassword`);
     }, 400);
   }
   useEffect(() => {

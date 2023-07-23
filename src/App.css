@@ -7,15 +7,17 @@
 body {
   height: 100%;
   width: 100%;
-  background: linear-gradient(rgba(255, 254, 254, 0.016), rgba(0, 0, 0, 0.032)), url(./page1-background.jpg);
+  background: linear-gradient(rgba(255, 254, 254, 0.016), rgba(0, 0, 0, 0.032)), url(Components/assets/page1-background.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   filter: brightness(1);
-  
 }
 #main-div {
   height: 100vh;
   width: 100%;
   box-sizing: border-box;
+}
+html::-webkit-scrollbar{
+  display: none;
 }
